@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .navbar .menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Menu Button in Navbar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin-right: 20px;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Main content */
+        .content {
+            display: flex;
+            flex: 1;
+            margin-top: 60px; /* To offset the navbar */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+
+        /* Right Panel */
+        .right-panel {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .right-panel {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="menu-container">
+            <button class="openbtn" onclick="openNav()">☰ Menu</button>
+        </div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#login">Login</a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#taxonomy">Taxonomy and Naming</a>
+        <a href="#anatomy">Anatomy</a>
+        <a href="#behavior">Behavior and Ecology</a>
+        <a href="#rhinocerotidae">Rhinocerotidae</a>
+        <a href="#ceratotherium">Ceratotherium simum</a>
+        <a href="#diceros">Diceros bicornis</a>
+        <a href="#dicerorhinus">Dicerorhinus sumatrensis</a>
+        <a href="#rhinocerossondaicus">Rhinoceros sondaicus</a>
+    </div>
+
+    <div class="content">
+        <div class="main-content">
+            <h1>Rhinoceroses</h1>
+            <p>A rhinoceros (/raɪˈnɒsərəs/ ry-NOSS-ə-rəss; from Ancient Greek ῥινόκερως (rhinókerōs) 'nose-horned'; from ῥίς (rhis) 'nose' and κέρας (kéras) 'horn';[1] pl.: rhinoceros or rhinoceroses), commonly abbreviated to rhino, is a member of any of the five extant species (or numerous extinct species) of odd-toed ungulates (perissodactyls) in the family Rhinocerotidae; it can also refer to a member of any of the extinct species of the superfamily Rhinocerotoidea. Two of the extant species are native to Africa, and three to South and Southeast Asia.<br><br>
+
+Rhinoceroses are some of the largest remaining megafauna: all weigh over half a tonne in adulthood. They have a herbivorous diet, small brains 400–600 g (14–21 oz) for mammals of their size, one or two horns, and a thick 1.5–5 cm (0.59–1.97 in), protective skin formed from layers of collagen positioned in a lattice structure. They generally eat leafy material, although their ability to ferment food in their hindgut allows them to subsist on more fibrous plant matter when necessary. Unlike other perissodactyls, the two African species of rhinoceros lack teeth at the front of their mouths; they rely instead on their lips to pluck food.<br><br>
+
+Rhinoceroses are killed by poachers for their horns, which are bought and sold on the black market for high prices, leading to most living rhinoceros species being considered endangered. The contemporary market for rhino horn is overwhelmingly driven by China and Vietnam, where it is bought by wealthy consumers to use in traditional Chinese medicine, among other uses. Rhino horns are made of keratin, the same material as hair and fingernails, and there is no good evidence of any health benefits. A market also exists for rhino horn dagger handles in Yemen, which was the major source of demand for rhino horn in the 1970s and 1980s.<br><br>
+
+
+
+Cladogram following a phylogenetic study<br><br>
+The word rhinoceros is derived through Latin from the Ancient Greek: ῥινόκερως, which is composed of ῥινο- (rhino-, "of the nose") and κέρας (keras, "horn") with a horn on the nose. The name has been in use since the 14th century.<br><br>
+
+The family Rhinocerotidae consists of only four extant genera: Ceratotherium (white rhinoceros), Diceros (black rhinoceros), Dicerorhinus (Sumatran rhinoceros), and Rhinoceros (Indian and Javan rhinoceros). The living species fall into three categories. The two African species, the white rhinoceros and the black rhinoceros, belong to the tribe Dicerotini, which originated in the middle Miocene, about 14.2 million years ago. The species diverged during the early Pliocene (about 5 million years ago). The main difference between black and white rhinos is the shape of their mouths – white rhinos have broad flat lips for grazing, whereas black rhinos have long pointed lips for eating foliage. There are two living Rhinocerotini species, the Indian rhinoceros and the Javan rhinoceros, which diverged from one another about 10 million years ago. The Sumatran rhinoceros is the only surviving representative of the Dicerorhinini.<br><br>
+
+A subspecific hybrid white rhino (Ceratotherium s. simum × C. s. cottoni) was bred at the Dvůr Králové Zoo (Zoological Garden Dvur Kralove nad Labem) in the Czech Republic in 1977. Interspecific hybridisation of black and white rhinoceroses has also been confirmed.
+
+            <div id="taxonomy">
+                <h1>Taxonomy and Naming</h1>
+                <p>The word rhinoceros is derived through Latin from the Ancient Greek: ῥινόκερως, which is composed of ῥινο- (rhino-, "of the nose") and κέρας (keras, "horn") with a horn on the nose. The name has been in use since the 14th century.<br><br>
+
+The family Rhinocerotidae consists of only four extant genera: Ceratotherium (white rhinoceros), Diceros (black rhinoceros), Dicerorhinus (Sumatran rhinoceros), and Rhinoceros (Indian and Javan rhinoceros). The living species fall into three categories. The two African species, the white rhinoceros and the black rhinoceros, belong to the tribe Dicerotini, which originated in the middle Miocene, about 14.2 million years ago. The species diverged during the early Pliocene (about 5 million years ago). The main difference between black and white rhinos is the shape of their mouths – white rhinos have broad flat lips for grazing, whereas black rhinos have long pointed lips for eating foliage. There are two living Rhinocerotini species, the Indian rhinoceros and the Javan rhinoceros, which diverged from one another about 10 million years ago. The Sumatran rhinoceros is the only surviving representative of the Dicerorhinini.<br><br>
+
+A subspecific hybrid white rhino (Ceratotherium s. simum × C. s. cottoni) was bred at the Dvůr Králové Zoo (Zoological Garden Dvur Kralove nad Labem) in the Czech Republic in 1977. Interspecific hybridisation of black and white rhinoceroses has also been confirmed.<br><br>
+
+While the black rhinoceros has 84 chromosomes (diploid number, 2N, per cell), all other rhinoceros species have 82 chromosomes. Chromosomal polymorphism might lead to varying chromosome counts. For instance, in a study there were three northern white rhinoceroses with 81 chromosomes.</p>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <img src="images.jpg" alt="Rhinoceros" width="200" height="200">
+            <h3>Scientific Classification</h3>
+            <table>
+                <tr><td>Domain:</td><td>Eukaryota</td></tr>
+                <tr><td>Kingdom:</td><td>Animalia</td></tr>
+                <tr><td>Phylum:</td><td>Chordata</td></tr>
+                <tr><td>Class:</td><td>Mammalia</td></tr>
+                <tr><td>Order:</td><td>Perissodactyla</td></tr>
+                <tr><td>Superfamily:</td><td>Rhinocerotoidea</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Responsive Webpage. All rights reserved.</p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
